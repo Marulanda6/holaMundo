@@ -42,9 +42,11 @@ public class Main {
         b.setSigno(es.nextLine());
         // Imprimir el horóscopo determinado por el método en Persona
         System.out.println(b.determinarHoroscopo());
+        b.etapaDesarrollo(23);
 
-        // Cerrar el Scanner
-        es.close();
+       
+        
+       
     }
 }
 

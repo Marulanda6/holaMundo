@@ -70,6 +70,34 @@ public class Persona {
             return "Signo no reconocido. Por favor, asegúrate de ingresar un signo válido.";
         }
     }
+    
+    //ETAPA DE DESARROLLO
+    public void etapaDesarrollo(int edad){
+        String resultado="";
+        if(edad>=0 && edad<=5 ){
+            resultado="Primera infancia";
+        }else if (edad>=6 && edad<=11 ){
+            resultado= "Infacia";
+        }else if (edad>=12 && edad<=18 ){
+            resultado="Adolescencia";
+        }else if (edad>=14 && edad<=26){
+            resultado="Juventud";
+        }else if (edad>=19 && edad<40){
+            resultado="Adultez Temprano";
+        }else if (edad>=40 && edad<60){
+            resultado="Adultez Media";
+        }else if (edad>60){
+            resultado="Adultez Mayor";
+        }
+            System.out.println("La etapa de desarrollo es:"+ resultado);
+                  
+                  
+            
+            
+                    
+            
+        
+    }
 }
 
 
