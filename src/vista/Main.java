@@ -5,39 +5,47 @@
 package vista;
 
 import modelo.Persona;
+import java.util.Scanner;
 
 /**
  *
- * @author kirlok6
+ * @author Usuario
  */
 public class Main {
-    //llama al interprete de java
+    // Método principal que llama al intérprete de Java
     public static void main(String[] args) {
-                 System.out.println("HOLA MUNDO");
-    //Ejercicio 1 determinar el horosco  mediante el signo sodiacal 
-   String signoZodiacal="Leo";
-        if(signoZodiacal=="Aries"){
+        // Ejercicio 1: Determinar el horóscopo mediante el signo zodiacal
+        String signoZodiacal = "Leo";
+        if (signoZodiacal.equals("Aries")) {
             System.out.println("EL DÍA DE HOY TE VAS A MORIR DEL HAMBRE!!!");
-        }else if (signoZodiacal=="Leo") {
-            System.out.println("HOY SERÁS LA PERSONA MÁS FELIZ DEL MUNDO ");
-        }else if ( signoZodiacal=="Cáncer") {
+        } else if (signoZodiacal.equals("Leo")) {
+            System.out.println("HOY SERÁS LA PERSONA MÁS FELIZ DEL MUNDO");
+        } else if (signoZodiacal.equals("Cáncer")) {
             System.out.println("TENDRÁS UN DÍA CAÓTICO PERO ES POSIBLE QUE ENCUENTRES DINERO");
-        }else{
-            System.out.println("Ingrese un signo válido");}
-    
+        } else {
+            System.out.println("Ingrese un signo válido");
+        }
 
-        //PROBAR UNA CLASE
-        //DECLARAR INSTANCIAS UN OBJETOS
-        //NombreCLase  nombreObjeto(variable)=new NombreCLass();
-       Persona a=new Persona();
-       a.setSigno("LEO");
-        System.out.println(a.derminarHoroscopo());
-     
+        // Probar una clase: Crear un objeto de tipo Persona
+        Persona a = new Persona();
+        a.setSigno("Escorpio");
+        // Imprimir el horóscopo determinado por el método en Persona
+        System.out.println(a.determinarHoroscopo());
+
+        // Instanciar un objeto de tipo Scanner
+        Scanner es = new Scanner(System.in);
+        // Crear un objeto de tipo Persona
+        Persona b = new Persona();
+
+        // Solicitar el signo zodiacal al usuario
+        System.out.println("Ingrese su signo zodiacal:");
+        b.setSigno(es.nextLine());
+        // Imprimir el horóscopo determinado por el método en Persona
+        System.out.println(b.determinarHoroscopo());
+
+        // Cerrar el Scanner
+        es.close();
     }
-}              
+}
 
-    
-   
-
-    
 
